@@ -1,0 +1,43 @@
+{
+  "version": "1.0.43",
+  "terminal": {
+    "poolSize": 10,
+    "recycleAfter": 20,
+    "healthCheckInterval": 30000,
+    "type": "auto"
+  },
+  "orchestrator": {
+    "maxConcurrentTasks": 10,
+    "taskTimeout": 300000,
+    "defaultPriority": 5
+  },
+  "memory": {
+    "backend": "json",
+    "path": "./memory/claude-flow-data.json",
+    "cacheSize": 1000,
+    "indexing": true
+  },
+  "agents": {
+    "maxAgents": 20,
+    "defaultCapabilities": [
+      "research",
+      "code",
+      "terminal"
+    ],
+    "resourceLimits": {
+      "memory": "1GB",
+      "cpu": "50%"
+    }
+  },
+  "mcp": {
+    "port": 3000,
+    "host": "localhost",
+    "timeout": 30000
+  },
+  "logging": {
+    "level": "info",
+    "file": "./claude-flow.log",
+    "maxSize": "10MB",
+    "maxFiles": 5
+  }
+}
